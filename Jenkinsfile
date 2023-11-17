@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         always {
-            docker.image('fe98fc51eb70').inside {
+            docker.image('myjenkins-blueocean:1.0.1').inside {
             sh 'cp -r /var/jenkins_home/workspace/Sample-React-App/build /home/nishad-imit/Documents/Build'
                 }
             }
