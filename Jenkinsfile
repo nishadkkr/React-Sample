@@ -17,12 +17,11 @@ pipeline {
                 sh 'npm run build'
             }
         }
-    }
-    post {
-        always {
-            docker.image('myjenkins-blueocean:1.0.1').inside {
-            sh 'cp -r /var/jenkins_home/workspace/Sample-React-App/build /home/nishad-imit/Documents/Build'
-                }
+
+        stage('Copy the Build') {
+            steps {
+                sh 'docker cp -r 1f807e2a5e68:/var/jenkins_home/workspace/Sample-React-App/build ~/home/nishad-imit/Documents/Build'
             }
         }
+    }
 }
