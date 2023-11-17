@@ -9,6 +9,9 @@ function App() {
         <p>
           This is a sample React App
         </p>
+        <p>
+          Created by Nishad P Kuttikkattoor
+        </p>
       </header>
     </div>
   );
