@@ -11,9 +11,16 @@ pipeline {
                 sh 'npm install' 
             }
         }
+
         stage('Build the Code') {
             steps {
                 sh 'npm run build'
+            }
+        }
+
+        stage('Copy the build File') {
+            steps {
+                sh 'cp -r * /home/nishad-imit/Documents/Build'
             }
         }
     }
