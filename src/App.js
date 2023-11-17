@@ -11,6 +11,7 @@ function App() {
         </p>
         <p>
           Created by Nishad P Kuttikkattoor
+          Kozhikkode
         </p>
       </header>
     </div>
