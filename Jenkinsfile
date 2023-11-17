@@ -20,7 +20,7 @@ pipeline {
 
         stage('Copy the Build') {
             steps {
-                sh 'docker exec 1f807e2a5e68 ls -l /var/jenkins_home/workspace/Sample-React-App/build'
+                sh 'docker exec -it 1f807e2a5e68 /bin/bash ls -l /var/jenkins_home/workspace/Sample-React-App/build'
                 sh 'docker cp 1f807e2a5e68:/var/jenkins_home/workspace/Sample-React-App/build /home/nishad-imit/Documents/build'
             }
         }
