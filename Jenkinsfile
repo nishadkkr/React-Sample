@@ -18,11 +18,11 @@ pipeline {
             }
         }
 
-        post {
-            always {
-                script {
-                    docker.image('fe98fc51eb70').inside('-v /home/nishad-imit/Documents/Build:/var/jenkins_home/workspace/Sample-React-App') {
-                    sh 'cp -r /var/jenkins_home/workspace/Sample-React-App/build /home/nishad-imit/Documents/Build'
+    post {
+        always {
+            script {
+                docker.image('fe98fc51eb70').inside('-v /home/nishad-imit/Documents/Build:/var/jenkins_home/workspace/Sample-React-App') {
+                sh 'cp -r /var/jenkins_home/workspace/Sample-React-App/build /home/nishad-imit/Documents/Build'
                     }
                 }
             }
