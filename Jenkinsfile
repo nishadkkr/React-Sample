@@ -17,7 +17,7 @@ pipeline {
                 sh 'npm run build'
             }
         }
-
+    }
     post {
         always {
             docker.image('fe98fc51eb70').inside('-v /home/nishad-imit/Documents/Build:/var/jenkins_home/workspace/Sample-React-App') {
@@ -25,5 +25,4 @@ pipeline {
                 }
             }
         }
-    }
 }
