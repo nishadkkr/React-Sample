@@ -15,7 +15,7 @@ pipeline {
         stage('Build the Code') {
             steps {
                 sh 'npm run build'
-                sh 'docker ps'
+                sh 'serve -s build'
             }
         }
     }
